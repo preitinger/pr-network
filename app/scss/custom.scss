@@ -1,0 +1,107 @@
+// ==========================================================================
+// 1. DEINE FARB-VARIABLEN (Müssen VOR dem Bootstrap-Import stehen!)
+// ==========================================================================
+$slate-50: #f8fafc; // Hellgrau/Weiß für den Darkmode (shadcn-Style)
+// Ein modernes, spürbar helleres Schiefergrau statt hartem Schwarz:
+$slate-700: #334155;
+$slate-900: #0f172a; // Tiefes Anthrazit für den Lightmode (shadcn-Style)
+// Ein tiefes, edles Smaragd-Dunkelgrün für den Lightmode:
+$fintech-green: #58ba3e; //#3aa24f;// #11a57e; 
+$ubuntu-green: #4b8501;
+$ubuntu-green-darker:#417200;
+
+// Das überschreibt das Standard-Blau für den normalen Modus (Lightmode)
+$primary: $ubuntu-green-darker; // $fintech-green;
+
+@import "~bootstrap/scss/bootstrap";
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons';
+
+// ==========================================================================
+// 3. ANPASSUNG FÜR DEN DARK MODE (Muss NACH dem Import stehen)
+// ==========================================================================
+// Da dein Hook [data-bs-theme="dark"] setzt, greift diese Regel automatisch:
+[data-bs-theme="dark"] {
+    // --bs-primary: #{$slate-50};
+    // --bs-primary-rgb: #{to-rgb($slate-50)};
+
+    // Wir sagen Bootstrap, wie der primäre Button im Darkmode aussehen soll,
+    // damit der Text dunkel und lesbar auf dem hellen Button bleibt.
+    // .btn-primary {
+    //     @include button-variant($slate-50, // Hintergrundfarbe
+    //         $slate-50, // Rahmenfarbe
+    //         $slate-900, // Textfarbe (Dunkel auf hellem Grund!)
+    //         #e2e8f0, // Hover-Hintergrund
+    //         #e2e8f0, // Hover-Rahmen
+    //         $slate-900 // Hover-Textfarbe
+    //     );
+    // }
+}
+
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+:root {
+    --bs-breakpoint-name: xs;
+
+}
+
+@include media-breakpoint-up(sm) {
+    :root {
+        --bs-breakpoint-name: sm;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    :root {
+        --bs-breakpoint-name: md;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    :root {
+        --bs-breakpoint-name: lg;
+    }
+
+    .border-end-lg {
+        border-right: 1px solid var(--#{$prefix}border-color);
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    :root {
+        --bs-breakpoint-name: xl;
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    :root {
+        --bs-breakpoint-name: xxl;
+    }
+}
+
+.border-sm {
+    @include media-breakpoint-up(sm) {
+        border: 1px solid var(--bs-border-color) !important;
+    }
+}
+
+
+.rounded-sm {
+    border-radius: 0;
+
+    @include media-breakpoint-up(sm) {
+        @include border-radius($border-radius !important);
+    }
+}
+
+@media (hover: none) {
+
+    .btn-outline-primary:focus,
+    .btn-outline-primary:active {
+        background-color: transparent !important;
+        // Hier nutzt du die SASS-Variable, damit sie immer synchron mit deinem Button bleibt
+        color: $primary !important;
+    }
+}

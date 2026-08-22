@@ -20,3 +20,27 @@ And I hope we can find, using the tool "discussion", ways to share the values we
 
 1. Tags
 1. I18n?
+
+### How share an idea
+
+### How find related or equal ideas
+... and merge them?
+
+## How organize, categorize, ... "ideas"?
+
+What actually is an idea. How store relations between ideas? How categorize them to keep the overview? Shall one restrict to 5 sub-ideas for each idea because of the fact that humans have 5 fingers and their focus is often only for 5 things at the same time?
+
+### How organize changes?
+Changes will certainly occur in:
+* Name of an idea
+* Description of an idea
+* List of sub-ideas
+* Tags
+
+## How present shared ideas?
+
+Certainly, on a website. But, how organize the information about the idea?
+- Name
+- Description
+- Tags
+- Links to sub ideas

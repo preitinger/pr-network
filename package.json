@@ -1,0 +1,35 @@
+{
+    "name": "pr-network",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "biome check",
+        "format": "biome format --write"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.8",
+        "bootstrap-icons": "^1.13.1",
+        "immer": "^11.1.18",
+        "mongodb": "^7.5.0",
+        "next": "16.3.1",
+        "react": "19.2.8",
+        "react-bootstrap": "^2.10.10",
+        "react-dom": "19.2.8",
+        "runtypes": "^7.0.5",
+        "zustand": "^5.0.15"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.4.2",
+        "@tailwindcss/postcss": "^4",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "sass": "1.77.6",
+        "tailwindcss": "^4",
+        "typescript": "^5"
+    },
+    "packageManager": "pnpm@11.22.0+sha512.1ff870c4c6133dfd88fb2afc46dd13d47f09c9794b438c6fdb47ca98caf3bc16381ee0be93a091b8e3824cf01f889f46d7d9e20910fb0be1ab0fb5baa80dd621"
+}
